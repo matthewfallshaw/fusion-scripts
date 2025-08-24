@@ -1,0 +1,14 @@
+{
+	"autodeskProduct":	"Fusion",
+	"type":	"addin",
+	"id":	"94c6638b-3c54-41c2-804c-7e7bfd348fe1",
+	"author":	"Matthew Fallshaw",
+	"description":	{
+		"":	"Sums the length of selected items in the Sketch environment."
+	},
+	"version":	"0.1",
+	"runOnStartup":	false,
+	"supportedOS":	"windows|mac",
+	"editEnabled":	true,
+	"iconFilename":	"AddInIcon.svg"
+}

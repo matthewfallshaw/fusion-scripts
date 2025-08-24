@@ -1,0 +1,32 @@
+[project]
+name = "fusion-scripts"
+version = "0.1.0"
+description = "Fusion 360 add-ins and API documentation tools"
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.25.0",
+    "html2text>=2020.1.16",
+    "beautifulsoup4>=4.9.0",
+]
+
+[project.scripts]
+apidocs = "apidocs.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "mypy>=1.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["apidocs*"]
+exclude = ["totalLengthButton*", "exportComponentsToSTEP*"]
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

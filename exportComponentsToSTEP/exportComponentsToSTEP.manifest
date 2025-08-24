@@ -1,0 +1,12 @@
+{
+    "autodeskProduct": "Fusion360",
+    "type": "addin",
+    "id": "C40FB12B-8362-4523-A90C-B0CEE92B55DD",
+    "author": "Matthew Fallshaw",
+    "description": {
+        "": "Add-in to export each component in the active design to a separate STEP file, or export each configuration to a separate STEP file."
+    },
+    "version": "1.2",
+    "runOnStartup": true,
+    "supportedOS": "windows|mac"
+}
