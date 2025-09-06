@@ -146,9 +146,9 @@ def get_component_filename(occurrence: adsk.fusion.Occurrence) -> str:
 
 
 def create_export_options(filename: str,
-                         target: Any,
-                         export_format: str,
-                         exportMgr: adsk.fusion.ExportManager) -> Any:
+                          target: Any,
+                          export_format: str,
+                          exportMgr: adsk.fusion.ExportManager) -> Any:
     """Factory function to create appropriate export options based on format."""
     if export_format.upper() == 'STEP':
         return exportMgr.createSTEPExportOptions(filename, target)
@@ -159,11 +159,11 @@ def create_export_options(filename: str,
 
 
 def export_items(items: List[Dict[str, Any]],
-                directory: str,
-                export_format: str,
-                exportMgr: adsk.fusion.ExportManager,
-                ui: adsk.core.UserInterface,
-                skip_duplicates: bool = True) -> int:
+                 directory: str,
+                 export_format: str,
+                 exportMgr: adsk.fusion.ExportManager,
+                 ui: adsk.core.UserInterface,
+                 skip_duplicates: bool = True) -> int:
     """Exporter: Export a collection of items with deduplication."""
     if not items:
         return 0
@@ -220,8 +220,8 @@ def export_items(items: List[Dict[str, Any]],
 
 
 def export_with_collector(collector_fn: Callable[[adsk.fusion.Design], List[Dict[str, Any]]],
-                         export_format: str,
-                         dialog_title: str) -> None:
+                          export_format: str,
+                          dialog_title: str) -> None:
     """Generic export function using collector functions."""
     app = adsk.core.Application.get()
     ui = app.userInterface
