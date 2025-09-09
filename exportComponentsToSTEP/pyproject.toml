@@ -1,0 +1,25 @@
+[project]
+name = "exportComponentsToSTEP"
+version = "0.1.0"
+description = "Fusion 360 add-in that exports each component or configuration to separate STEP files"
+requires-python = ">=3.8"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "mypy>=1.0.0",
+    "fusion-apidocs @ git+https://github.com/matthewfallshaw/fusion-apidocs.git",
+]
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["*"]
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

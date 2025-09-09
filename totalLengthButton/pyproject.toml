@@ -1,20 +1,14 @@
 [project]
-name = "fusion-scripts"
+name = "totalLengthButton"
 version = "0.1.0"
-description = "Fusion 360 add-ins and API documentation tools"
+description = "Fusion 360 add-in that calculates and displays the total length of selected sketch entities"
 requires-python = ">=3.8"
-dependencies = [
-    "requests>=2.25.0",
-    "html2text>=2020.1.16",
-    "beautifulsoup4>=4.9.0",
-]
-
-[project.scripts]
-apidocs = "apidocs.cli:main"
+dependencies = []
 
 [project.optional-dependencies]
 dev = [
     "mypy>=1.0.0",
+    "fusion-apidocs @ git+https://github.com/matthewfallshaw/fusion-apidocs.git",
 ]
 
 [build-system]
@@ -22,8 +16,7 @@ requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-include = ["apidocs*"]
-exclude = ["totalLengthButton*", "exportComponentsToSTEP*"]
+include = ["*"]
 
 [tool.mypy]
 python_version = "3.8"

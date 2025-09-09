@@ -87,8 +87,3 @@ CLAUDE.md
 # Personal/sensitive paths in VSCode settings
 **/.vscode/settings.json
 **/.vscode/launch.json
-
-# Downloaded API documentation (changes frequently)
-apidocs/toctree.json
-apidocs/toctree.json.bak
-apidocs/toctree.json.tmp
